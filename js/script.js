@@ -1,46 +1,44 @@
-const login = document.querySelector('#login');
-const pwd = document.querySelector('#password');
-const btn = document.querySelector('.btn');
+const login = document.querySelector("#login");
+const pwd = document.querySelector("#password");
+const btn = document.querySelector(".btn");
 
-const msg = document.querySelectorAll('.msg-error');
+const msg = document.querySelectorAll(".msg-error");
 
-const modal = document.querySelector('.modal');
-const btnClose = document.querySelector('.btn-close');
+const modal = document.querySelector(".modal");
+const btnClose = document.querySelector(".btn-close");
 
 function text() {
-  const regexp = /\//g;
-  login.value = `SEF-RJ/`.replace(regexp, '\\');
   msg.forEach((msg) => {
-    msg.classList.remove('active');
+    msg.classList.remove("active");
   });
 }
 
 function showModal() {
-  if (login.value === '') {
+  if (login.value === "") {
     msg.forEach((msg) => {
-      msg.classList.add('active');
+      msg.classList.add("active");
     });
   } else {
-    modal.classList.add('active');
+    modal.classList.add("active");
   }
 }
 
 function closeMenu() {
-  modal.classList.remove('active');
+  modal.classList.remove("active");
 }
 
-login.addEventListener('mousedown', text);
-btn.addEventListener('click', showModal);
+login.addEventListener("mousedown", text);
+btn.addEventListener("click", showModal);
 
-btnClose.addEventListener('click', closeMenu);
+btnClose.addEventListener("click", closeMenu);
 
-const newPwd = document.querySelector('#new-pwd');
-const confirmPwd = document.querySelector('#confirm-pwd');
+const newPwd = document.querySelector("#new-pwd");
+const confirmPwd = document.querySelector("#confirm-pwd");
 
-const strPwd = document.querySelector('.str-new-pwd');
+const strPwd = document.querySelector(".str-new-pwd");
 
-const strMsg = document.querySelector('.str-msg');
-const confirmMsg = document.querySelector('.confirm-msg');
+const strMsg = document.querySelector(".str-msg");
+const confirmMsg = document.querySelector(".confirm-msg");
 
 function newPass() {
   const newPassValue = newPwd.value;
@@ -62,58 +60,58 @@ function newPass() {
   });
 
   if (activeRules == 1) {
-    strPwd.classList.add('very-weak');
-    strPwd.classList.remove('weak');
+    strPwd.classList.add("very-weak");
+    strPwd.classList.remove("weak");
 
-    strMsg.innerText = 'senha muito fraca!';
-    strMsg.style.color = '#c71717';
+    strMsg.innerText = "senha muito fraca!";
+    strMsg.style.color = "#c71717";
   } else if (activeRules == 2) {
-    strPwd.classList.remove('very-weak');
-    strPwd.classList.add('weak');
-    strPwd.classList.remove('medium');
+    strPwd.classList.remove("very-weak");
+    strPwd.classList.add("weak");
+    strPwd.classList.remove("medium");
 
-    strMsg.innerText = 'senha fraca!';
-    strMsg.style.color = '#c74f17';
+    strMsg.innerText = "senha fraca!";
+    strMsg.style.color = "#c74f17";
   } else if (activeRules == 3) {
-    strPwd.classList.remove('weak');
-    strPwd.classList.add('medium');
-    strPwd.classList.remove('good');
+    strPwd.classList.remove("weak");
+    strPwd.classList.add("medium");
+    strPwd.classList.remove("good");
 
-    strMsg.innerText = 'senha mediana!';
-    strMsg.style.color = '#ddcf0b';
+    strMsg.innerText = "senha mediana!";
+    strMsg.style.color = "#ddcf0b";
   } else if (activeRules == 4) {
-    strPwd.classList.remove('medium');
-    strPwd.classList.add('good');
-    strPwd.classList.remove('very-good');
+    strPwd.classList.remove("medium");
+    strPwd.classList.add("good");
+    strPwd.classList.remove("very-good");
 
-    strMsg.innerText = 'senha boa.';
-    strMsg.style.color = '#89c717';
+    strMsg.innerText = "senha boa.";
+    strMsg.style.color = "#89c717";
   } else if (activeRules == 5) {
-    strPwd.classList.remove('good');
-    strPwd.classList.add('very-good');
+    strPwd.classList.remove("good");
+    strPwd.classList.add("very-good");
 
-    strMsg.innerText = 'senha muito boa!';
-    strMsg.style.color = '#2cc705';
+    strMsg.innerText = "senha muito boa!";
+    strMsg.style.color = "#2cc705";
   } else {
-    strPwd.classList.remove('very-weak');
-    strPwd.classList.remove('weak');
-    strPwd.classList.remove('medium');
-    strPwd.classList.remove('good');
-    strPwd.classList.remove('very-good');
+    strPwd.classList.remove("very-weak");
+    strPwd.classList.remove("weak");
+    strPwd.classList.remove("medium");
+    strPwd.classList.remove("good");
+    strPwd.classList.remove("very-good");
   }
 }
 
 function confirmPass() {
   if (confirmPwd.value !== newPwd.value) {
-    confirmMsg.innerText = 'A senha não confere!';
-    confirmMsg.style.color = '#c71717';
+    confirmMsg.innerText = "A senha não confere!";
+    confirmMsg.style.color = "#c71717";
   } else {
-    confirmMsg.innerText = 'A senhas são iguais!';
-    confirmMsg.style.color = '#2cc705';
-    confirmMsg.style.transition = 'opacity 1.5s ease';
-    confirmMsg.style.opacity = '0';
+    confirmMsg.innerText = "A senhas são iguais!";
+    confirmMsg.style.color = "#2cc705";
+    confirmMsg.style.transition = "opacity 1.5s ease";
+    confirmMsg.style.opacity = "0";
   }
 }
 
-newPwd.addEventListener('keyup', newPass);
-confirmPwd.addEventListener('keyup', confirmPass);
+newPwd.addEventListener("keyup", newPass);
+confirmPwd.addEventListener("keyup", confirmPass);
