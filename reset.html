@@ -1,76 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>Secretaria de Estado de Fazenda</title>
-</head>
+  </head>
 
-<body>
-    <img src="img/img-logo-governo-RJ.png" class="brand" alt="">
+  <body>
+    <img src="img/img-logo-governo-RJ.png" class="brand" alt="" />
 
     <section class="modal">
-        <div class="item-modal">
-            <button class="btn-close"><img src="img/cancel.png"></button>
-            <h2>Parabéns! Seu login está <span class="green">ativo</span>!</h2>
-            <img src="img/smiley.png" alt="">
-        </div>
+      <div class="item-modal">
+        <button class="btn-close"><img src="img/cancel.png" /></button>
+        <h2>Parabéns! Seu login está <span class="green">ativo</span>!</h2>
+        <img src="img/smiley.png" alt="" />
+      </div>
     </section>
 
     <section class="form-section">
-        <h1>Sua senha expirou? Não tem problema. Crie uma nova senha agora!</h1>
-        <form action="" class="form">
-            <label for="login">Login:</label>
-            <input type="text" name="login" id="login" placeholder="SEF-RJ\usuario:" required>
-            <p class="msg-error">O preenchimento deste campo é obrigatório!</p>
+      <h1>Sua senha expirou? Não tem problema. Crie uma nova senha agora!</h1>
+      <form action="" class="form">
+        <div class="input-group">
+          <span>SEF-RJ\</span>
+          <input
+            type="text"
+            name="login"
+            id="login"
+            placeholder="usuario:"
+            required
+          />
+        </div>
+        <p class="msg-error">O preenchimento deste campo é obrigatório!</p>
 
-            <label for="password">Senha Atual:</label>
-            <input type="password" name="password" id="password" placeholder="Senha:" required>
-            <p class="msg-error">O preenchimento deste campo é obrigatório!</p>
+        <label for="password">Senha Atual:</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Senha:"
+          required
+        />
+        <p class="msg-error">O preenchimento deste campo é obrigatório!</p>
 
-            <label for="newpwd">Nova Senha:</label>
-            <input type="password" name="newpwd" id="new-pwd" placeholder="Senha:" required>
-            <div class="str-new-pwd"></div>
+        <label for="newpwd">Nova Senha:</label>
+        <input
+          type="password"
+          name="newpwd"
+          id="new-pwd"
+          placeholder="Senha:"
+          required
+        />
+        <div class="str-new-pwd"></div>
 
-            <p class="str-msg"></p>
-            <p class="msg-error">O preenchimento deste campo é obrigatório!</p>
+        <p class="str-msg"></p>
+        <p class="msg-error">O preenchimento deste campo é obrigatório!</p>
 
-            <label for="confirm-pwd">Confirme a Nova Senha:</label>
-            <input type="password" name="confirm-pwd" id="confirm-pwd" placeholder="Senha:" required>
+        <label for="confirm-pwd">Confirme a Nova Senha:</label>
+        <input
+          type="password"
+          name="confirm-pwd"
+          id="confirm-pwd"
+          placeholder="Senha:"
+          required
+        />
 
-            <p class="confirm-msg"></p>
-            <p class="msg-error">O preenchimento deste campo é obrigatório!</p>
+        <p class="confirm-msg"></p>
+        <p class="msg-error">O preenchimento deste campo é obrigatório!</p>
 
-            <div>
-                <button type="button" class="btn">Confirmar</button>
-                <a href="index.html" class="btn btn-grey">Voltar</a>
-            </div>
+        <div>
+          <button type="button" class="btn">Confirmar</button>
+          <a href="index.html" class="btn btn-grey">Voltar</a>
+        </div>
 
-            <p class="help">Ainda precisa de ajuda? Entre em contato com <a href="mailto:">servicedesk@fazenda.rj.gov.br</a> | 📞 2334-4600 </p>
-        </form>
+        <small class="help">
+          Ainda precisa de ajuda? Entre em contato com
+          <a href="mailto:">servicedesk@fazenda.rj.gov.br</a> |
+          <img src="img/phone-call.png" alt="Telefone:" /> (21)2334-4600
+        </small>
+      </form>
 
-        <article>
-            <h3>Sua senha deve conter:</h3>
-            <ul>
-                <li>No mínimo 8 dígitos</li>
-                <li>Pelo menos uma letra maiúscula</li>
-                <li>Pelo menos uma letra minúscula</li>
-                <li>Pelo menos um número</li>
-                <li>Pelo menos um caractere especial</li>
-            </ul>
-            <h4>Exemplo: "Ssilveira#43"</h4>
-        </article>
+      <article>
+        <h3>Sua senha deve conter:</h3>
+        <ul>
+          <li>No mínimo 8 dígitos</li>
+          <li>Pelo menos uma letra maiúscula</li>
+          <li>Pelo menos uma letra minúscula</li>
+          <li>Pelo menos um número</li>
+          <li>Pelo menos um caractere especial</li>
+        </ul>
+        <h4>Exemplo: "Ssilveira#43"</h4>
+      </article>
     </section>
 
     <section class="banner">
-        <img src="img/Login-amico.png" alt="">
+      <img src="img/Login-amico.png" alt="" />
     </section>
 
     <script src="js/script.js"></script>
-</body>
-
+  </body>
 </html>
