@@ -24,8 +24,7 @@ a:hover {
   grid-template-columns: 1fr;
   grid-template-rows: 50px;
   gap: 30px;
-  padding-inline: 30px;
-  padding-bottom: 50px;
+  padding: 4rem 3rem;
 }
 
 .form-section-reset {
@@ -33,8 +32,7 @@ a:hover {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 50px;
   gap: 30px;
-  padding-inline: 30px;
-  padding-bottom: 50px;
+  padding: 4rem 3rem;
 }
 
 .form-section h1 {
