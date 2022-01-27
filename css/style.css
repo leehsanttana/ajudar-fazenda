@@ -304,6 +304,10 @@ article h4 {
   font-weight: bold;
 }
 
+article span {
+  color: #c71717;
+  text-align: center;
+
 article ul li {
   font-size: 0.8rem;
   margin-bottom: 0.5rem;
