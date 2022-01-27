@@ -35,7 +35,7 @@ a:hover {
   padding: 4rem 3rem;
 }
 
-.form-section h1 {
+.form-section h1, .form-section-reset h1 {
   grid-column: 1 / 3;
   font-size: 1.5rem;
   font-weight: bold;
@@ -130,8 +130,9 @@ input {
 }
 
 .help {
+  grid-column: 1 / 3;
   position: absolute;
-  bottom: 1em;
+  bottom: 1rem;
 }
 
 .banner {
@@ -286,6 +287,7 @@ article {
   border-radius: 15px;
   padding: 1rem;
   height: 250px;
+  margin-bottom: 1rem;
 }
 
 article h3 {
@@ -307,8 +309,8 @@ article h4 {
 article span {
   display: block;
   margin-top: 1rem;
-  color: #c71717;
-  text-align: center;
+  font-size: .8rem;
+}
 
 article ul li {
   font-size: 0.8rem;
@@ -395,11 +397,12 @@ input[type="range"]::-webkit-slider-thumb {
     margin-left: 30px;
   }
 
-  .form-section {
+  .form-section, .form-section-reset {
     grid-template-columns: 1fr;
     padding-inline: 20px;
     position: relative;
   }
+  
 
   .form-section h1 {
     padding: 20px 0;
@@ -415,13 +418,8 @@ input[type="range"]::-webkit-slider-thumb {
     padding-top: 2rem;
     display: grid;
     grid-column: 1 / 3;
-    margin-bottom: 2rem;
   }
 
-  .help {
-    position: relative;
-    top: 70px;
-  }
 }
 
 @media screen and (max-width: 375px) {
