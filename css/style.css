@@ -285,7 +285,7 @@ article {
   box-shadow: 1px 1px 6px 1px rgba(34, 34, 34, 0.3);
   border-radius: 15px;
   padding: 1rem;
-  height: 200px;
+  height: 250px;
 }
 
 article h3 {
@@ -305,6 +305,8 @@ article h4 {
 }
 
 article span {
+  display: block;
+  margin-top: 1rem;
   color: #c71717;
   text-align: center;
 
